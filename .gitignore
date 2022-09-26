@@ -1,13 +1,3 @@
-*.tar
-*.tar.*
-*.jar
-*.exe
-*.msi
-*.zip
-*.tgz
-*.log
-*.log.*
-*.sig
-
-pkg/
-src/
+// you will configure an Ubuntu VM to spoof a Windows system as it attempts to communicate directly to the  gateway. You will also configure the
+Ubuntu VM to spoof the pfSense gateway that tries to communicate with the Windows VM directly. You will then view the traffic being redirected across the
+Ubuntu workstation, which is now acting as a “Man in the Middle” (MITM)//
